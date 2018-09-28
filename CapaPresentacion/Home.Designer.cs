@@ -59,7 +59,7 @@
             // 
             // menuVertical
             // 
-            this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(39)))), ((int)(((byte)(69)))));
             this.menuVertical.Controls.Add(this.btnSalir);
             this.menuVertical.Controls.Add(this.btnReportes);
             this.menuVertical.Controls.Add(this.btnInventario);
@@ -81,12 +81,14 @@
             this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalir.Location = new System.Drawing.Point(0, 593);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(250, 45);
             this.btnSalir.TabIndex = 1;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -103,6 +105,7 @@
             this.btnReportes.Size = new System.Drawing.Size(250, 45);
             this.btnReportes.TabIndex = 1;
             this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Visible = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
@@ -120,6 +123,7 @@
             this.btnInventario.Size = new System.Drawing.Size(250, 45);
             this.btnInventario.TabIndex = 1;
             this.btnInventario.Text = "Inventario";
+            this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInventario.UseVisualStyleBackColor = true;
             this.btnInventario.Visible = false;
             this.btnInventario.Click += new System.EventHandler(this.btnInventario_Click);
@@ -137,6 +141,7 @@
             this.btnVentas.Size = new System.Drawing.Size(250, 45);
             this.btnVentas.TabIndex = 1;
             this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVentas.UseVisualStyleBackColor = true;
             this.btnVentas.Visible = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
@@ -155,6 +160,7 @@
             this.btnAdmin.Size = new System.Drawing.Size(250, 45);
             this.btnAdmin.TabIndex = 1;
             this.btnAdmin.Text = "Admin ";
+            this.btnAdmin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Visible = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
@@ -172,6 +178,7 @@
             this.btnMenu.Size = new System.Drawing.Size(250, 45);
             this.btnMenu.TabIndex = 1;
             this.btnMenu.Text = "Menú";
+            this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
@@ -198,7 +205,7 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.Gainsboro;
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(92)))), ((int)(((byte)(141)))));
             this.BarraTitulo.Controls.Add(this.IconRestaurar);
             this.BarraTitulo.Controls.Add(this.IconMinimizar);
             this.BarraTitulo.Controls.Add(this.IconMaximizar);
@@ -279,7 +286,7 @@
             // PictureBox2
             // 
             this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
-            this.PictureBox2.Location = new System.Drawing.Point(219, 129);
+            this.PictureBox2.Location = new System.Drawing.Point(238, 207);
             this.PictureBox2.Name = "PictureBox2";
             this.PictureBox2.Size = new System.Drawing.Size(128, 128);
             this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
