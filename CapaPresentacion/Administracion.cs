@@ -11,9 +11,9 @@ using System.Runtime.InteropServices;
 
 namespace CapaPresentacion
 {
-    public partial class Home : Form
+    public partial class Administracion : Form
     {
-        public Home()
+        public Administracion()
         {
             InitializeComponent();
         }
@@ -21,11 +21,16 @@ namespace CapaPresentacion
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam,int lparam);
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
         private void btnSlim_Click(object sender, EventArgs e)
         {
-            if (menuVertical.Width== 250)
+            if (menuVertical.Width == 250)
             {
                 menuVertical.Width = 60;
             }
@@ -37,22 +42,11 @@ namespace CapaPresentacion
         }
 
 
-        private void BarraTitulo_MouseMove(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112,0xf012, 0);
-        }
-        private void btnMenu_Click(object sender, EventArgs e)
-        {
-            btnAdmin.Visible = true;
-            btnVentas.Visible = true;
-            btnInventario.Visible = true;
-            btnReportes.Visible = true;
-        }
+        
 
         private void IconCerrar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void IconMaximizar_Click(object sender, EventArgs e)
@@ -74,32 +68,11 @@ namespace CapaPresentacion
             IconMaximizar.Visible = true;
         }
 
-        private void btnAdmin_Click(object sender, EventArgs e)
-        {
-            Administracion _administracion = new Administracion();
-            _administracion.Show();
-        }
-
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInventario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
-            Login _login = new Login();
-            _login.Show();
+            Home _home = new Home();
+            _home.Show();
         }
     }
 }
