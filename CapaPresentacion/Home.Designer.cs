@@ -304,6 +304,7 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.menuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
             this.ContenedorPrincipal.ResumeLayout(false);

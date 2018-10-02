@@ -11,6 +11,11 @@ namespace CapaPresentacion
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        /// privilegios
+        /// 
+        public static String Cargo;
+
+
         [STAThread]
         static void Main()
         {

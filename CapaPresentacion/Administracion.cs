@@ -24,10 +24,10 @@ namespace CapaPresentacion
 
         }
 
-        private void Privilegio()
-        {
-            if ()
-        }
+        //private void Privilegio()
+        //{
+        //    if (Program.cargo =! )
+        //}
         #region FUNCIONALIDADES DEL FORMULARIO
 
         //RESIZE METODO PARA REDIMENCIONAR/CAMBIAR TAMAÑO A FORMULARIO EN TIEMPO DE EJECUCION ----------------------------------------------------------
@@ -214,6 +214,10 @@ namespace CapaPresentacion
             btnTipoUser.BackColor = Color.FromArgb(12, 61, 93);
         }
 
+        private void BtnMenu_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using CapaPresentacionAdministracion;
+
 
 namespace CapaPresentacion
 {
@@ -18,6 +18,21 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrivilegioUsuario()
+        {
+            if (Program.Cargo !="1")
+            {
+                btnInventario.Enabled = false;
+            }
+        }
+
+
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -102,5 +117,7 @@ namespace CapaPresentacion
             Login _login = new Login();
             _login.Show();
         }
+
+        
     }
 }

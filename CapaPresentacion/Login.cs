@@ -103,10 +103,19 @@ namespace CapaPresentacion
 
                     if (Loguear.Read() == true)
                     {
-                        
+
                         this.Hide();
                         LoginCarga _loginCarga = new LoginCarga();
                         _loginCarga.Show();
+                        //try
+                        //{
+                        //    Program.Cargo = Loguear["TIP_ID"].ToString();
+
+                        //}
+                        //catch (Exception w)
+                        //{
+
+                        //}
                     }
                     else
                     {

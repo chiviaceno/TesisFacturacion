@@ -28,6 +28,7 @@ namespace CapaDatos
             comando.CommandType = CommandType.StoredProcedure;
             comando.Parameters.AddWithValue("@usuario", user);
             comando.Parameters.AddWithValue("@contraseña", pass);
+
             leer = comando.ExecuteReader();
             return leer;
         }
