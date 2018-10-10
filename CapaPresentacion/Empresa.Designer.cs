@@ -137,7 +137,7 @@
             this.panel1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(649, 42);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 443);
+            this.panel1.Size = new System.Drawing.Size(342, 517);
             this.panel1.TabIndex = 9;
             // 
             // btnImagen
@@ -148,14 +148,14 @@
             this.btnImagen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
             this.btnImagen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
             this.btnImagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImagen.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImagen.Font = new System.Drawing.Font("Century Schoolbook", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImagen.ForeColor = System.Drawing.Color.White;
             this.btnImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImagen.Location = new System.Drawing.Point(284, 337);
+            this.btnImagen.Location = new System.Drawing.Point(279, 410);
             this.btnImagen.Name = "btnImagen";
-            this.btnImagen.Size = new System.Drawing.Size(52, 45);
+            this.btnImagen.Size = new System.Drawing.Size(35, 30);
             this.btnImagen.TabIndex = 20;
-            this.btnImagen.Text = "..::..";
+            this.btnImagen.Text = ".::.";
             this.btnImagen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnImagen.UseVisualStyleBackColor = true;
             this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
@@ -167,7 +167,7 @@
             this.ptbLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbLogo.Location = new System.Drawing.Point(130, 337);
             this.ptbLogo.Name = "ptbLogo";
-            this.ptbLogo.Size = new System.Drawing.Size(138, 45);
+            this.ptbLogo.Size = new System.Drawing.Size(135, 103);
             this.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbLogo.TabIndex = 19;
             this.ptbLogo.TabStop = false;
@@ -179,7 +179,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.LightGray;
-            this.label9.Location = new System.Drawing.Point(18, 354);
+            this.label9.Location = new System.Drawing.Point(23, 386);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 19);
             this.label9.TabIndex = 17;
@@ -335,7 +335,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(110, 388);
+            this.btnGuardar.Location = new System.Drawing.Point(110, 462);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(168, 45);
             this.btnGuardar.TabIndex = 2;
@@ -365,7 +365,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(389, 430);
+            this.btnEditar.Location = new System.Drawing.Point(389, 504);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(181, 45);
             this.btnEditar.TabIndex = 21;
@@ -385,7 +385,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(66, 430);
+            this.btnEliminar.Location = new System.Drawing.Point(66, 504);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(181, 45);
             this.btnEliminar.TabIndex = 20;
@@ -403,7 +403,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(57)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(997, 496);
+            this.ClientSize = new System.Drawing.Size(997, 570);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dataGridView1);

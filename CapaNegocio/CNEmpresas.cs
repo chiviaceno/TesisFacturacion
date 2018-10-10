@@ -21,18 +21,18 @@ namespace CapaNegocio
             return tabla;
         }
 
-        public void InsertarCliente(CEEmpresas cEEmpresas)
+        public void InsertarEmpresa(CEEmpresas cEEmpresas)
         {
             objetoCD.Insertar(cEEmpresas);
         }
 
-        public void EditarCliente(CEEmpresas cEEmpresas)
+        public void EditarEmpresa(CEEmpresas cEEmpresas)
         {
             objetoCD.Editar(cEEmpresas);
 
         }
 
-        public void EliminarCliente(CEEmpresas cEEmpresas)
+        public void EliminarEmpresa(CEEmpresas cEEmpresas)
         {
             objetoCD.Eliminar(cEEmpresas);
         }

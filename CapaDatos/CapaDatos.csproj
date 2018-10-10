@@ -48,6 +48,7 @@
     <Compile Include="CDEmpleados.cs" />
     <Compile Include="CDEmpresas.cs" />
     <Compile Include="CDLogin.cs" />
+    <Compile Include="CDTUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -105,7 +105,7 @@ namespace CapaPresentacionAdministracion
                     objetoCE.Email = txtEmail.Text;
                     objetoCE.Logo = ptbLogo;
                     
-                    objetoCN.InsertarCliente(objetoCE);
+                    objetoCN.InsertarEmpresa(objetoCE);
                     MessageBox.Show("Se Ingreso correctamente el Cliente");
                     MostrarEmpresa();
                     LimpiarForm();
@@ -132,7 +132,7 @@ namespace CapaPresentacionAdministracion
                         objetoCE.Email = txtEmail.Text;
                         objetoCE.Logo = ptbLogo;
                         
-                        objetoCN.EditarCliente(objetoCE);
+                        objetoCN.EditarEmpresa(objetoCE);
                         MessageBox.Show("Se Editó correctamente el Cliente");
                         MostrarEmpresa();
                         LimpiarForm();
@@ -175,7 +175,7 @@ namespace CapaPresentacionAdministracion
             {
                 IdCliente = dataGridView1.CurrentRow.Cells["EMP_ID"].Value.ToString();
                 objetoCE.Id = Convert.ToInt32(IdCliente);
-                objetoCN.EliminarCliente(objetoCE);
+                objetoCN.EliminarEmpresa(objetoCE);
                 MessageBox.Show("Se Eliminó correctamente el Cliente");
                 MostrarEmpresa();
             }
