@@ -92,6 +92,7 @@ namespace CapaPresentacionAdministracion
                     try
                     {
                         objetoCE.Id = Convert.ToInt32(IdCliente);
+                        objetoCE.Nombre = txtNombre.Text;
                         objetoCE.Apellido = txtApellido.Text;
                         objetoCE.Cedula = txtCedula.Text;
                         objetoCE.Dirrecion = txtDireccion.Text;
