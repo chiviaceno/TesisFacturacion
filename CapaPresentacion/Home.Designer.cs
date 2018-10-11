@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.menuVertical = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnReportes = new System.Windows.Forms.Button();
             this.btnInventario = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
@@ -61,7 +60,6 @@
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(39)))), ((int)(((byte)(69)))));
             this.menuVertical.Controls.Add(this.btnSalir);
-            this.menuVertical.Controls.Add(this.btnReportes);
             this.menuVertical.Controls.Add(this.btnInventario);
             this.menuVertical.Controls.Add(this.btnVentas);
             this.menuVertical.Controls.Add(this.btnAdmin);
@@ -87,28 +85,10 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(250, 45);
             this.btnSalir.TabIndex = 1;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "      Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 381);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(250, 45);
-            this.btnReportes.TabIndex = 1;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Visible = false;
-            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnInventario
             // 
@@ -118,7 +98,7 @@
             this.btnInventario.ForeColor = System.Drawing.Color.White;
             this.btnInventario.Image = ((System.Drawing.Image)(resources.GetObject("btnInventario.Image")));
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 318);
+            this.btnInventario.Location = new System.Drawing.Point(0, 370);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(250, 45);
             this.btnInventario.TabIndex = 1;
@@ -136,7 +116,7 @@
             this.btnVentas.ForeColor = System.Drawing.Color.White;
             this.btnVentas.Image = ((System.Drawing.Image)(resources.GetObject("btnVentas.Image")));
             this.btnVentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVentas.Location = new System.Drawing.Point(0, 257);
+            this.btnVentas.Location = new System.Drawing.Point(0, 288);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(250, 45);
             this.btnVentas.TabIndex = 1;
@@ -155,7 +135,7 @@
             this.btnAdmin.ForeColor = System.Drawing.Color.White;
             this.btnAdmin.Image = ((System.Drawing.Image)(resources.GetObject("btnAdmin.Image")));
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(0, 196);
+            this.btnAdmin.Location = new System.Drawing.Point(0, 208);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(250, 45);
             this.btnAdmin.TabIndex = 1;
@@ -177,7 +157,7 @@
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(250, 45);
             this.btnMenu.TabIndex = 1;
-            this.btnMenu.Text = "Menú";
+            this.btnMenu.Text = "   Menú";
             this.btnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
@@ -323,7 +303,6 @@
         #endregion
         internal System.Windows.Forms.Panel menuVertical;
         internal System.Windows.Forms.Button btnSalir;
-        internal System.Windows.Forms.Button btnReportes;
         internal System.Windows.Forms.Button btnInventario;
         internal System.Windows.Forms.Button btnVentas;
         internal System.Windows.Forms.Button btnAdmin;

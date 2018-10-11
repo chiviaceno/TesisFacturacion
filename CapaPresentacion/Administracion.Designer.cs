@@ -300,7 +300,7 @@
             this.BtnMenu.Name = "BtnMenu";
             this.BtnMenu.Size = new System.Drawing.Size(250, 45);
             this.BtnMenu.TabIndex = 1;
-            this.BtnMenu.Text = "Menú Admin";
+            this.BtnMenu.Text = "    Menú Admin";
             this.BtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnMenu.UseVisualStyleBackColor = true;
             this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);

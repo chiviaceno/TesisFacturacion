@@ -116,7 +116,6 @@ namespace CapaPresentacionAdministracion
                     try
                     {
                         objetoCE.Id = Convert.ToInt32(IdUsuario);
-
                         objetoCE.Tip_Id = Convert.ToInt32(cmbRol.SelectedValue);
                         objetoCE.Empl_Id = Convert.ToInt32(cmbEmpleado.SelectedValue);
                         objetoCE.Usuario = txtUsuario.Text;
