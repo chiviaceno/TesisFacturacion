@@ -151,6 +151,7 @@ namespace CapaPresentacionAdministracion
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 IdEmpleado = dataGridView1.CurrentRow.Cells["EMPL_ID"].Value.ToString();
+                objetoCE.Id = Convert.ToInt32(IdEmpleado);
                 objetoCN.EliminarEmpleado(objetoCE);
                 MessageBox.Show("Se Eliminó correctamente el Empleado");
                 MostrarEmpleado();
