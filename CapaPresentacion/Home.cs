@@ -63,7 +63,7 @@ namespace CapaPresentacion
             btnAdmin.Visible = true;
             btnVentas.Visible = true;
             btnInventario.Visible = true;
-            btnReportes.Visible = true;
+         
         }
 
         private void IconCerrar_Click(object sender, EventArgs e)
@@ -98,18 +98,17 @@ namespace CapaPresentacion
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-
+            Ventas _ventas = new Ventas();
+            _ventas.Show();
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-
+            Inventario _inventario = new Inventario();
+            _inventario.Show();
         }
 
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
