@@ -21,5 +21,6 @@ namespace CapaEntidad
             get { return _Rol; }
             set { _Rol = value; }
         }
+       
     }
 }

@@ -70,7 +70,7 @@ namespace CapaPresentacionAdministracion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // INSERTAR EMPLEADO
+            // INSERTAR TIPO DE USUARIO
             if (Editar == false)
             {
                 try
@@ -88,7 +88,7 @@ namespace CapaPresentacionAdministracion
                     MessageBox.Show("No se puede Ingresar el Tipo de Usuario por  " + ex);
                 }
 
-                // EDITAR EMPLEADO
+                // EDITAR TIPO DE USUARIO
             }
             if (Editar == true)
             {
