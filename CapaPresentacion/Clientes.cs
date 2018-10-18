@@ -51,11 +51,20 @@ namespace CapaPresentacionAdministracion
         private void Clientes_Load(object sender, EventArgs e)
         {
             MostrarCliente();
+            ListarEmpresas();
         }
         private void MostrarCliente()
         {
             CNCliente objeto = new CNCliente();
             dataGridView1.DataSource = objeto.MostrarCliente();
+        }
+
+        private void ListarEmpresas()
+        {
+            CNEmpleado _objetoCN = new CNEmpleado();
+            cbxEmpresa.DataSource = _objetoCN.MostrarEmpresa();
+            cbxEmpresa.DisplayMember = "RAZON SOCIAL";
+            cbxEmpresa.ValueMember = "ID";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -65,13 +74,14 @@ namespace CapaPresentacionAdministracion
             {
                 try
                 {
+                    objetoCE.Id_Empl = Convert.ToInt32(cbxEmpresa.SelectedValue);
                     objetoCE.Nombre = txtNombre.Text;
                     objetoCE.Apellido = txtApellido.Text;
                     objetoCE.Cedula = txtCedula.Text;
                     objetoCE.Dirrecion = txtDireccion.Text;
                     objetoCE.Telefono = txtTelefono.Text;
                     objetoCE.Email = txtEmail.Text;
-                    objetoCE.Fecha = dtmFecha.Text;
+                    objetoCE.Fecha = Convert.ToDateTime(dtmFecha.Text);
                     objetoCE.Estado = cbxEstado.Text;
                     objetoCN.InsertarCliente(objetoCE);
                     MessageBox.Show("Se Ingreso correctamente el Cliente");
@@ -92,13 +102,14 @@ namespace CapaPresentacionAdministracion
                     try
                     {
                         objetoCE.Id = Convert.ToInt32(IdCliente);
+                        objetoCE.Id_Empl = Convert.ToInt32(cbxEmpresa.SelectedValue);
                         objetoCE.Nombre = txtNombre.Text;
                         objetoCE.Apellido = txtApellido.Text;
                         objetoCE.Cedula = txtCedula.Text;
                         objetoCE.Dirrecion = txtDireccion.Text;
                         objetoCE.Telefono = txtTelefono.Text;
                         objetoCE.Email = txtEmail.Text;
-                        objetoCE.Fecha = dtmFecha.Text;
+                        objetoCE.Fecha = Convert.ToDateTime(dtmFecha.Text);
                         objetoCE.Estado = cbxEstado.Text;
                         objetoCN.EditarCliente(objetoCE);
                         MessageBox.Show("Se Editó correctamente el Cliente");
@@ -121,15 +132,16 @@ namespace CapaPresentacionAdministracion
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                txtNombre.Text = dataGridView1.CurrentRow.Cells["CLI_NOMBRE"].Value.ToString();
-                txtApellido.Text = dataGridView1.CurrentRow.Cells["CLI_APLELLIDO"].Value.ToString();
-                txtCedula.Text = dataGridView1.CurrentRow.Cells["CLI_CEDULA"].Value.ToString();
-                txtDireccion.Text = dataGridView1.CurrentRow.Cells["CLI_DIRECCION"].Value.ToString();
-                txtTelefono.Text = dataGridView1.CurrentRow.Cells["CLI_TELEFONO"].Value.ToString();
-                txtEmail.Text = dataGridView1.CurrentRow.Cells["CLI_EMAIL"].Value.ToString();
-                dtmFecha.Text = dataGridView1.CurrentRow.Cells["CLI_FECHA_REGISTRO"].Value.ToString();
-                cbxEstado.Text = dataGridView1.CurrentRow.Cells["CLI_ESTADO"].Value.ToString();
-                IdCliente = dataGridView1.CurrentRow.Cells["CLI_ID"].Value.ToString();
+                cbxEmpresa.Text = dataGridView1.CurrentRow.Cells["EMPRESA"].Value.ToString();
+                txtNombre.Text = dataGridView1.CurrentRow.Cells["NOMBRES"].Value.ToString();
+                txtApellido.Text = dataGridView1.CurrentRow.Cells["APELLIDOS"].Value.ToString();
+                txtCedula.Text = dataGridView1.CurrentRow.Cells["CEDULA"].Value.ToString();
+                txtDireccion.Text = dataGridView1.CurrentRow.Cells["DIRECCION"].Value.ToString();
+                txtTelefono.Text = dataGridView1.CurrentRow.Cells["TELEFONO"].Value.ToString();
+                txtEmail.Text = dataGridView1.CurrentRow.Cells["E-MAIL"].Value.ToString();
+                dtmFecha.Text = dataGridView1.CurrentRow.Cells["FECHA REGISTRO"].Value.ToString();
+                cbxEstado.Text = dataGridView1.CurrentRow.Cells["ESTADO"].Value.ToString();
+                IdCliente = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
             }
             else
             {
@@ -149,7 +161,7 @@ namespace CapaPresentacionAdministracion
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                IdCliente = dataGridView1.CurrentRow.Cells["CLI_ID"].Value.ToString();
+                IdCliente = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 objetoCE.Id = Convert.ToInt32(IdCliente);
                 objetoCN.EliminarCliente(objetoCE);
                 MessageBox.Show("Se Eliminó correctamente el Cliente");

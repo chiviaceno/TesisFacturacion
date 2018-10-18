@@ -38,7 +38,6 @@
             this.IconCerrar = new System.Windows.Forms.PictureBox();
             this.btnSlim = new System.Windows.Forms.PictureBox();
             this.menuVertical = new System.Windows.Forms.Panel();
-            this.btnTipoUser = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnEmpresas = new System.Windows.Forms.Button();
@@ -163,7 +162,6 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(39)))), ((int)(((byte)(69)))));
-            this.menuVertical.Controls.Add(this.btnTipoUser);
             this.menuVertical.Controls.Add(this.btnSalir);
             this.menuVertical.Controls.Add(this.btnUsuarios);
             this.menuVertical.Controls.Add(this.btnEmpresas);
@@ -177,24 +175,6 @@
             this.menuVertical.Name = "menuVertical";
             this.menuVertical.Size = new System.Drawing.Size(250, 700);
             this.menuVertical.TabIndex = 2;
-            // 
-            // btnTipoUser
-            // 
-            this.btnTipoUser.FlatAppearance.BorderSize = 0;
-            this.btnTipoUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnTipoUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnTipoUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipoUser.ForeColor = System.Drawing.Color.White;
-            this.btnTipoUser.Image = ((System.Drawing.Image)(resources.GetObject("btnTipoUser.Image")));
-            this.btnTipoUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoUser.Location = new System.Drawing.Point(0, 509);
-            this.btnTipoUser.Name = "btnTipoUser";
-            this.btnTipoUser.Size = new System.Drawing.Size(250, 45);
-            this.btnTipoUser.TabIndex = 2;
-            this.btnTipoUser.Text = " Tipo Usuario";
-            this.btnTipoUser.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTipoUser.UseVisualStyleBackColor = true;
-            this.btnTipoUser.Click += new System.EventHandler(this.btnTipoUser_Click);
             // 
             // btnSalir
             // 
@@ -359,6 +339,5 @@
         internal System.Windows.Forms.Button btnClientes;
         internal System.Windows.Forms.Button BtnMenu;
         internal System.Windows.Forms.PictureBox PictureBox1;
-        internal System.Windows.Forms.Button btnTipoUser;
     }
 }

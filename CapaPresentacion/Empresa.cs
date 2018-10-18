@@ -153,15 +153,15 @@ namespace CapaPresentacionAdministracion
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                txtRazonSocial.Text = dataGridView1.CurrentRow.Cells["EMP_RAZON_SOCIAL"].Value.ToString();
-                txtNombreFantasia.Text = dataGridView1.CurrentRow.Cells["EMP_NOMBRE_FANTASIA"].Value.ToString();
-                txtRuc.Text = dataGridView1.CurrentRow.Cells["EMP_RUC"].Value.ToString();
-                txtDireccion.Text = dataGridView1.CurrentRow.Cells["EMP_DIRECCION"].Value.ToString();
-                txtTelefono.Text = dataGridView1.CurrentRow.Cells["EMP_TELEFONO"].Value.ToString();
-                txtEmail.Text = dataGridView1.CurrentRow.Cells["EMP_EMAIL"].Value.ToString();
-                ptbLogo.Text = dataGridView1.CurrentRow.Cells["EMP_LOGO"].Value.ToString();
+                txtRazonSocial.Text = dataGridView1.CurrentRow.Cells["RAZON SOCIAL"].Value.ToString();
+                txtNombreFantasia.Text = dataGridView1.CurrentRow.Cells["NOMBRE FANTASIA"].Value.ToString();
+                txtRuc.Text = dataGridView1.CurrentRow.Cells["RUC"].Value.ToString();
+                txtDireccion.Text = dataGridView1.CurrentRow.Cells["DIRRECION"].Value.ToString();
+                txtTelefono.Text = dataGridView1.CurrentRow.Cells["TELEFONO"].Value.ToString();
+                txtEmail.Text = dataGridView1.CurrentRow.Cells["E-MAIL"].Value.ToString();
+                ptbLogo.Text = dataGridView1.CurrentRow.Cells["LOGOTIPO"].Value.ToString();
                
-                IdCliente = dataGridView1.CurrentRow.Cells["EMP_ID"].Value.ToString();
+                IdCliente = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
             }
             else
             {
@@ -173,7 +173,7 @@ namespace CapaPresentacionAdministracion
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                IdCliente = dataGridView1.CurrentRow.Cells["EMP_ID"].Value.ToString();
+                IdCliente = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 objetoCE.Id = Convert.ToInt32(IdCliente);
                 objetoCN.EliminarEmpresa(objetoCE);
                 MessageBox.Show("Se Eliminó correctamente el Cliente");

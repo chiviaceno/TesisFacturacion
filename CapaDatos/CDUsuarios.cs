@@ -21,7 +21,7 @@ namespace CapaDatos
         {
            
             command.Connection = conexion.AbrirConexion();
-            command.CommandText = "MostrarEmpleado";
+            command.CommandText = "MostrarEmpleadoContac";
             command.CommandType = CommandType.StoredProcedure;
             leer = command.ExecuteReader();
             tabla.Load(leer);
@@ -33,20 +33,20 @@ namespace CapaDatos
         }
 
 
-        public DataTable ListarTipoUsuario()
-        {
+        //public DataTable ListarTipoUsuario()
+        //{
 
-            command.Connection = conexion.AbrirConexion();
-            command.CommandText = "MostrarTipoUsuario";
-            command.CommandType = CommandType.StoredProcedure;
-            leer = command.ExecuteReader();
-            tabla.Load(leer);
-            leer.Close();
-            conexion.CerrarConexion();
+        //    command.Connection = conexion.AbrirConexion();
+        //    command.CommandText = "MostrarTipoUsuario";
+        //    command.CommandType = CommandType.StoredProcedure;
+        //    leer = command.ExecuteReader();
+        //    tabla.Load(leer);
+        //    leer.Close();
+        //    conexion.CerrarConexion();
 
-            return tabla;
+        //    return tabla;
 
-        }
+        //}
 
         public DataTable Mostrar()
         {
@@ -69,7 +69,7 @@ namespace CapaDatos
             command.Connection = conexion.AbrirConexion();
             command.CommandText = "InsertarUsuario";
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@tip_id", cEUsuarios.Tip_Id);
+            command.Parameters.AddWithValue("@tipo", cEUsuarios.Tipo);
             command.Parameters.AddWithValue("@empl_id", cEUsuarios.Empl_Id);
             command.Parameters.AddWithValue("@usuario", cEUsuarios.Usuario);
             command.Parameters.AddWithValue("@password", cEUsuarios.Password);
@@ -87,7 +87,7 @@ namespace CapaDatos
             command.Connection = conexion.AbrirConexion();
             command.CommandText = "ModificarUsuario";
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("@tip_id", cEUsuarios.Tip_Id);
+            command.Parameters.AddWithValue("@tipo", cEUsuarios.Tipo);
             command.Parameters.AddWithValue("@empl_id", cEUsuarios.Empl_Id);
             command.Parameters.AddWithValue("@usuario", cEUsuarios.Usuario);
             command.Parameters.AddWithValue("@password", cEUsuarios.Password);

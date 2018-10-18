@@ -51,7 +51,7 @@ namespace CapaPresentacionAdministracion
         private void Usuarios_Load(object sender, EventArgs e)
         {
             ListarEmpleados();
-            ListarTipoUsuario();
+            
             MostrarUsuario();
         }
 
@@ -72,17 +72,11 @@ namespace CapaPresentacionAdministracion
         {
              CNUsuarios _objetoCN = new CNUsuarios();
             cmbEmpleado.DataSource = _objetoCN.MostrarEmpleado();
-            cmbEmpleado.DisplayMember= "EMPL_APELLIDOS";
+            cmbEmpleado.DisplayMember= "EMPLEADO";
             cmbEmpleado.ValueMember = "EMPL_ID";
         }
 
-        private void ListarTipoUsuario()
-        {
-            CNUsuarios __objetoCN = new CNUsuarios();
-            cmbRol.DataSource = __objetoCN.MostrarTipoUsuario();
-            cmbRol.DisplayMember = "TIP_ROL";
-            cmbRol.ValueMember = "TIP_ID";
-        }
+        
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -92,7 +86,7 @@ namespace CapaPresentacionAdministracion
                 {
 
 
-                    objetoCE.Tip_Id = Convert.ToInt32(cmbRol.SelectedValue);
+                    objetoCE.Tipo = cmbRol.Text;
                     objetoCE.Empl_Id = Convert.ToInt32(cmbEmpleado.SelectedValue);
                     objetoCE.Usuario = txtUsuario.Text;
                     objetoCE.Password = txtPassword.Text;
@@ -108,7 +102,7 @@ namespace CapaPresentacionAdministracion
                     MessageBox.Show("No se puede Ingresar el Usuario por  " + ex);
                 }
 
-                // EDITAR EMPLEADO
+                // EDITAR USUARRIO
             }
             if (Editar == true)
             {
@@ -116,7 +110,7 @@ namespace CapaPresentacionAdministracion
                     try
                     {
                         objetoCE.Id = Convert.ToInt32(IdUsuario);
-                        objetoCE.Tip_Id = Convert.ToInt32(cmbRol.SelectedValue);
+                        objetoCE.Tipo = cmbRol.Text;
                         objetoCE.Empl_Id = Convert.ToInt32(cmbEmpleado.SelectedValue);
                         objetoCE.Usuario = txtUsuario.Text;
                         objetoCE.Password = txtPassword.Text;
@@ -172,5 +166,7 @@ namespace CapaPresentacionAdministracion
                     MessageBox.Show("No ha seleccionado ningun Usuario");
                 }
         }
+
+        
     }
 }

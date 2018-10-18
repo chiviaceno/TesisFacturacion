@@ -36,5 +36,12 @@ namespace CapaNegocio
         {
             objetoCD.Eliminar(cEEmpleado);
         }
+
+        public DataTable MostrarEmpresa()
+        {
+            DataTable tabla = new DataTable();
+            tabla = objetoCD.ListarEmpresa();
+            return tabla;
+        }
     }
 }

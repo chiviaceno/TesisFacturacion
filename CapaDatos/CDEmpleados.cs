@@ -49,6 +49,7 @@ namespace CapaDatos
             command.Connection = conexion.AbrirConexion();
             command.CommandText = "InsertarEmpleado";
             command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@id_empl", cEEmpleado.Id_Empl);
             command.Parameters.AddWithValue("@nombre", cEEmpleado.Nombre);
             command.Parameters.AddWithValue("@apellido", cEEmpleado.Apellido);
             command.Parameters.AddWithValue("@cedula", cEEmpleado.Cedula);
@@ -67,6 +68,7 @@ namespace CapaDatos
             command.Connection = conexion.AbrirConexion();
             command.CommandText = "ModificarEmpleado";
             command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@id_empl", cEEmpleado.Id_Empl);
             command.Parameters.AddWithValue("@nombre", cEEmpleado.Nombre);
             command.Parameters.AddWithValue("@apellido", cEEmpleado.Apellido);
             command.Parameters.AddWithValue("@cedula", cEEmpleado.Cedula);
@@ -91,6 +93,20 @@ namespace CapaDatos
             command.ExecuteNonQuery();
 
             command.Parameters.Clear();
+        }
+        public DataTable ListarEmpresa()
+        {
+
+            command.Connection = conexion.AbrirConexion();
+            command.CommandText = "MostrarEmpresa";
+            command.CommandType = CommandType.StoredProcedure;
+            leer = command.ExecuteReader();
+            tabla.Load(leer);
+            leer.Close();
+            conexion.CerrarConexion();
+
+            return tabla;
+
         }
 
     }

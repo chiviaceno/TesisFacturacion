@@ -25,12 +25,12 @@ namespace CapaNegocio
             tabla = objetoCD.ListarEmpleado();
             return tabla;
         }
-        public DataTable MostrarTipoUsuario()
-        {
-            DataTable tabla = new DataTable();
-            tabla = objetoCD.ListarTipoUsuario();
-            return tabla;
-        }
+        //public DataTable MostrarTipoUsuario()
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = objetoCD.ListarTipoUsuario();
+        //    return tabla;
+        //}
         public void InsertarUsuario(CEUsuarios cEUsuarios)
         {
             objetoCD.Insertar(cEUsuarios);

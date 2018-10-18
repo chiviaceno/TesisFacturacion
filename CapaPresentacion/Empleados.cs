@@ -52,8 +52,15 @@ namespace CapaPresentacionAdministracion
         private void Empleados_Load(object sender, EventArgs e)
         {
             MostrarEmpleado();
+            ListarEmpresas();
         }
-
+        private void ListarEmpresas()
+        {
+            CNEmpleado _objetoCN = new CNEmpleado();
+            cbxEmpresa.DataSource = _objetoCN.MostrarEmpresa();
+            cbxEmpresa.DisplayMember = "RAZON SOCIAL";
+            cbxEmpresa.ValueMember = "ID";
+        }
         private void MostrarEmpleado()
         {
             CNEmpleado objeto = new CNEmpleado();
@@ -67,6 +74,7 @@ namespace CapaPresentacionAdministracion
             {
                 try
                 {
+                    objetoCE.Id_Empl = Convert.ToInt32(cbxEmpresa.SelectedValue);
                     objetoCE.Nombre = txtNombre.Text;
                     objetoCE.Apellido = txtApellido.Text;
                     objetoCE.Cedula = txtCedula.Text;
@@ -93,6 +101,7 @@ namespace CapaPresentacionAdministracion
                     try
                     {
                         objetoCE.Id = Convert.ToInt32(IdEmpleado);
+                        objetoCE.Id_Empl = Convert.ToInt32(cbxEmpresa.SelectedValue);
                         objetoCE.Nombre = txtNombre.Text;
                         objetoCE.Apellido = txtApellido.Text;
                         objetoCE.Cedula = txtCedula.Text;
@@ -122,14 +131,15 @@ namespace CapaPresentacionAdministracion
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 Editar = true;
-                txtNombre.Text = dataGridView1.CurrentRow.Cells["EMPL_NOMBRES"].Value.ToString();
-                txtApellido.Text = dataGridView1.CurrentRow.Cells["EMPL_APELLIDOS"].Value.ToString();
-                txtCedula.Text = dataGridView1.CurrentRow.Cells["EMPL_CEDULA"].Value.ToString();
-                txtDireccion.Text = dataGridView1.CurrentRow.Cells["EMPL_DIRECCION"].Value.ToString();
-                txtTelefono.Text = dataGridView1.CurrentRow.Cells["EMPL_TELEFONO"].Value.ToString();
-                txtEmail.Text = dataGridView1.CurrentRow.Cells["EMPL_EMAIL"].Value.ToString();
-                cbxEstado.Text = dataGridView1.CurrentRow.Cells["EMPL_ESTADO"].Value.ToString();
-                IdEmpleado = dataGridView1.CurrentRow.Cells["EMPL_ID"].Value.ToString();
+                cbxEmpresa.Text = dataGridView1.CurrentRow.Cells["EMPRESA"].Value.ToString();
+                txtNombre.Text = dataGridView1.CurrentRow.Cells["NOMBRES"].Value.ToString();
+                txtApellido.Text = dataGridView1.CurrentRow.Cells["APELLIDOS"].Value.ToString();
+                txtCedula.Text = dataGridView1.CurrentRow.Cells["CEDULA"].Value.ToString();
+                txtDireccion.Text = dataGridView1.CurrentRow.Cells["DIRECCION"].Value.ToString();
+                txtTelefono.Text = dataGridView1.CurrentRow.Cells["TELEFONO"].Value.ToString();
+                txtEmail.Text = dataGridView1.CurrentRow.Cells["E-MAIL"].Value.ToString();
+                cbxEstado.Text = dataGridView1.CurrentRow.Cells["ESTADO"].Value.ToString();
+                IdEmpleado = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
             }
             else
             {
@@ -150,7 +160,7 @@ namespace CapaPresentacionAdministracion
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                IdEmpleado = dataGridView1.CurrentRow.Cells["EMPL_ID"].Value.ToString();
+                IdEmpleado = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
                 objetoCE.Id = Convert.ToInt32(IdEmpleado);
                 objetoCN.EliminarEmpleado(objetoCE);
                 MessageBox.Show("Se Eliminó correctamente el Empleado");

@@ -184,8 +184,7 @@ namespace CapaPresentacion
                 btnEmpresas.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Usuarios"] == null)
                 btnUsuarios.BackColor = Color.FromArgb(4, 41, 68);
-            if (Application.OpenForms["TipoUsuario"] == null)
-                btnTipoUser.BackColor = Color.FromArgb(4, 41, 68);
+            
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
@@ -208,11 +207,7 @@ namespace CapaPresentacion
     }
 
 
-        private void btnTipoUser_Click(object sender, EventArgs e)
-        {
-            AbrirFormEnPanel<TipoUsuario>();
-            btnTipoUser.BackColor = Color.FromArgb(12, 61, 93);
-        }
+        
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {

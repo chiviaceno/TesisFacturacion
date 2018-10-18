@@ -16,9 +16,15 @@ namespace CapaEntidad
         private string _Email;
         private string _Estado;
         private int _Id;
-        private string _Fecha;
+        private DateTime _Fecha;
+        private int _Id_Empl;
 
-        public string Fecha
+        public int Id_Empl
+        { get { return _Id_Empl; }
+            set { _Id_Empl = value; }
+        }
+
+        public DateTime Fecha
         {
             get { return _Fecha; }
             set { _Fecha = value; }

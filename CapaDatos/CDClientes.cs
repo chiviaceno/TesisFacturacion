@@ -38,6 +38,7 @@ namespace CapaDatos
             command.Connection = conexion.AbrirConexion();
             command.CommandText = "InsertarCliente";
             command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@id_empl", cECliente.Id_Empl);
             command.Parameters.AddWithValue("@nombre", cECliente.Nombre);
             command.Parameters.AddWithValue("@apellido", cECliente.Apellido);
             command.Parameters.AddWithValue("@cedula", cECliente.Cedula);
@@ -57,6 +58,7 @@ namespace CapaDatos
             command.Connection = conexion.AbrirConexion();
             command.CommandText = "ModificarCliente";
             command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@id_empl", cECliente.Id_Empl);
             command.Parameters.AddWithValue("@nombre", cECliente.Nombre);
             command.Parameters.AddWithValue("@apellido", cECliente.Apellido);
             command.Parameters.AddWithValue("@cedula", cECliente.Cedula);
@@ -64,7 +66,7 @@ namespace CapaDatos
             command.Parameters.AddWithValue("@telefono", cECliente.Telefono);
             command.Parameters.AddWithValue("@email", cECliente.Email);
             command.Parameters.AddWithValue("@fecha", cECliente.Fecha);
-            command.Parameters.AddWithValue("@estado", cECliente.Estado);
+            command.Parameters.AddWithValue("@estado",cECliente.Estado);
             command.Parameters.AddWithValue("@id", cECliente.Id);
             command.ExecuteNonQuery();
             conexion.CerrarConexion();
@@ -83,5 +85,21 @@ namespace CapaDatos
 
             command.Parameters.Clear();
         }
+
+        public DataTable ListarEmpresa()
+        {
+
+            command.Connection = conexion.AbrirConexion();
+            command.CommandText = "MostrarEmpresa";
+            command.CommandType = CommandType.StoredProcedure;
+            leer = command.ExecuteReader();
+            tabla.Load(leer);
+            leer.Close();
+            conexion.CerrarConexion();
+
+            return tabla;
+
+        }
     }
+
 }

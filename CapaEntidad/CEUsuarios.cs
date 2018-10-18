@@ -9,7 +9,7 @@ namespace CapaEntidad
     public class CEUsuarios
     {
         private int _Id;
-        private int _Tip_Id;
+        private string _Tipo;
         private int _Empl_Id;
         private string _Usuario;
         private string _Password;
@@ -19,10 +19,10 @@ namespace CapaEntidad
             get { return _Id; }
             set { _Id = value; }
         }
-        public int Tip_Id
+        public string Tipo
         {
-            get { return _Tip_Id; }
-            set { _Tip_Id = value; }
+            get { return _Tipo; }
+            set { _Tipo = value; }
         }
 
         public int Empl_Id

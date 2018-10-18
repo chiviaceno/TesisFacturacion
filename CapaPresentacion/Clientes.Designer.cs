@@ -34,6 +34,7 @@
             this.IconMinimizar = new System.Windows.Forms.PictureBox();
             this.IconCerrar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtmFecha = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.cbxEstado = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -53,7 +54,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.dtmFecha = new System.Windows.Forms.DateTimePicker();
+            this.cbxEmpresa = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IconCerrar)).BeginInit();
@@ -70,7 +72,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(997, 35);
+            this.BarraTitulo.Size = new System.Drawing.Size(983, 35);
             this.BarraTitulo.TabIndex = 4;
             this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
             // 
@@ -91,7 +93,7 @@
             this.IconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("IconMinimizar.Image")));
-            this.IconMinimizar.Location = new System.Drawing.Point(943, 3);
+            this.IconMinimizar.Location = new System.Drawing.Point(929, 3);
             this.IconMinimizar.Name = "IconMinimizar";
             this.IconMinimizar.Size = new System.Drawing.Size(20, 20);
             this.IconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -104,7 +106,7 @@
             this.IconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconCerrar.Image = ((System.Drawing.Image)(resources.GetObject("IconCerrar.Image")));
-            this.IconCerrar.Location = new System.Drawing.Point(969, 3);
+            this.IconCerrar.Location = new System.Drawing.Point(955, 3);
             this.IconCerrar.Name = "IconCerrar";
             this.IconCerrar.Size = new System.Drawing.Size(20, 20);
             this.IconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -117,6 +119,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(49)))), ((int)(((byte)(69)))));
+            this.panel1.Controls.Add(this.cbxEmpresa);
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.dtmFecha);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.cbxEstado);
@@ -135,10 +139,21 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Font = new System.Drawing.Font("Century Schoolbook", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(647, 41);
+            this.panel1.Location = new System.Drawing.Point(633, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 443);
+            this.panel1.Size = new System.Drawing.Size(342, 576);
             this.panel1.TabIndex = 8;
+            // 
+            // dtmFecha
+            // 
+            this.dtmFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtmFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmFecha.Location = new System.Drawing.Point(130, 425);
+            this.dtmFecha.Name = "dtmFecha";
+            this.dtmFecha.Size = new System.Drawing.Size(200, 27);
+            this.dtmFecha.TabIndex = 18;
             // 
             // label9
             // 
@@ -147,7 +162,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.LightGray;
-            this.label9.Location = new System.Drawing.Point(18, 288);
+            this.label9.Location = new System.Drawing.Point(18, 431);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(64, 19);
             this.label9.TabIndex = 17;
@@ -163,7 +178,7 @@
             "Activo",
             "Pasivo",
             "Inactivo"});
-            this.cbxEstado.Location = new System.Drawing.Point(130, 331);
+            this.cbxEstado.Location = new System.Drawing.Point(130, 480);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(200, 27);
             this.cbxEstado.TabIndex = 16;
@@ -174,7 +189,7 @@
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(130, 232);
+            this.txtEmail.Location = new System.Drawing.Point(130, 371);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 27);
             this.txtEmail.TabIndex = 15;
@@ -184,7 +199,7 @@
             this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.Location = new System.Drawing.Point(130, 185);
+            this.txtTelefono.Location = new System.Drawing.Point(130, 316);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(200, 27);
             this.txtTelefono.TabIndex = 14;
@@ -194,7 +209,7 @@
             this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccion.Location = new System.Drawing.Point(130, 144);
+            this.txtDireccion.Location = new System.Drawing.Point(130, 263);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(200, 27);
             this.txtDireccion.TabIndex = 13;
@@ -204,7 +219,7 @@
             this.txtCedula.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCedula.Location = new System.Drawing.Point(130, 104);
+            this.txtCedula.Location = new System.Drawing.Point(130, 209);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(200, 27);
             this.txtCedula.TabIndex = 12;
@@ -214,7 +229,7 @@
             this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApellido.Location = new System.Drawing.Point(130, 63);
+            this.txtApellido.Location = new System.Drawing.Point(130, 155);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(200, 27);
             this.txtApellido.TabIndex = 11;
@@ -224,7 +239,7 @@
             this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.Location = new System.Drawing.Point(130, 26);
+            this.txtNombre.Location = new System.Drawing.Point(130, 104);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 27);
             this.txtNombre.TabIndex = 10;
@@ -236,7 +251,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.LightGray;
-            this.label7.Location = new System.Drawing.Point(18, 339);
+            this.label7.Location = new System.Drawing.Point(18, 488);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 19);
             this.label7.TabIndex = 9;
@@ -249,7 +264,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(18, 240);
+            this.label6.Location = new System.Drawing.Point(18, 379);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 19);
             this.label6.TabIndex = 8;
@@ -262,7 +277,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.LightGray;
-            this.label5.Location = new System.Drawing.Point(18, 193);
+            this.label5.Location = new System.Drawing.Point(18, 324);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 19);
             this.label5.TabIndex = 7;
@@ -275,7 +290,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.LightGray;
-            this.label4.Location = new System.Drawing.Point(18, 152);
+            this.label4.Location = new System.Drawing.Point(18, 271);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 19);
             this.label4.TabIndex = 6;
@@ -288,7 +303,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.LightGray;
-            this.label3.Location = new System.Drawing.Point(18, 111);
+            this.label3.Location = new System.Drawing.Point(18, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 5;
@@ -301,7 +316,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.LightGray;
-            this.label2.Location = new System.Drawing.Point(18, 71);
+            this.label2.Location = new System.Drawing.Point(18, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 19);
             this.label2.TabIndex = 4;
@@ -314,7 +329,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(18, 29);
+            this.label1.Location = new System.Drawing.Point(18, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 19);
             this.label1.TabIndex = 3;
@@ -332,7 +347,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(78, 388);
+            this.btnGuardar.Location = new System.Drawing.Point(78, 521);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(181, 45);
             this.btnGuardar.TabIndex = 2;
@@ -348,7 +363,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 64);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(622, 323);
+            this.dataGridView1.Size = new System.Drawing.Size(608, 323);
             this.dataGridView1.TabIndex = 9;
             // 
             // btnEditar
@@ -362,7 +377,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(368, 428);
+            this.btnEditar.Location = new System.Drawing.Point(368, 561);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(181, 45);
             this.btnEditar.TabIndex = 19;
@@ -382,7 +397,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(45, 428);
+            this.btnEliminar.Location = new System.Drawing.Point(45, 561);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(181, 45);
             this.btnEliminar.TabIndex = 18;
@@ -391,23 +406,30 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // dtmFecha
+            // cbxEmpresa
             // 
-            this.dtmFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtmFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtmFecha.Location = new System.Drawing.Point(130, 282);
-            this.dtmFecha.Name = "dtmFecha";
-            this.dtmFecha.Size = new System.Drawing.Size(200, 27);
-            this.dtmFecha.TabIndex = 18;
+            this.cbxEmpresa.FormattingEnabled = true;
+            this.cbxEmpresa.Location = new System.Drawing.Point(130, 44);
+            this.cbxEmpresa.Name = "cbxEmpresa";
+            this.cbxEmpresa.Size = new System.Drawing.Size(200, 27);
+            this.cbxEmpresa.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.LightGray;
+            this.label10.Location = new System.Drawing.Point(18, 52);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 19);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Empresa:";
             // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(57)))), ((int)(((byte)(83)))));
-            this.ClientSize = new System.Drawing.Size(997, 496);
+            this.ClientSize = new System.Drawing.Size(983, 629);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dataGridView1);
@@ -454,5 +476,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtmFecha;
+        private System.Windows.Forms.ComboBox cbxEmpresa;
+        private System.Windows.Forms.Label label10;
     }
 }

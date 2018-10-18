@@ -38,11 +38,11 @@
             this.IconCerrar = new System.Windows.Forms.PictureBox();
             this.btnSlim = new System.Windows.Forms.PictureBox();
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.btnReportes = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.BtnMenu = new System.Windows.Forms.Button();
             this.PictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnReportes = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             this.BarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IconRestaurar)).BeginInit();
@@ -150,6 +150,7 @@
             this.btnSlim.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSlim.TabIndex = 0;
             this.btnSlim.TabStop = false;
+            this.btnSlim.Click += new System.EventHandler(this.btnSlim_Click);
             // 
             // menuVertical
             // 
@@ -165,6 +166,23 @@
             this.menuVertical.Name = "menuVertical";
             this.menuVertical.Size = new System.Drawing.Size(250, 700);
             this.menuVertical.TabIndex = 2;
+            // 
+            // btnReportes
+            // 
+            this.btnReportes.FlatAppearance.BorderSize = 0;
+            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
+            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportes.Location = new System.Drawing.Point(0, 342);
+            this.btnReportes.Name = "btnReportes";
+            this.btnReportes.Size = new System.Drawing.Size(250, 45);
+            this.btnReportes.TabIndex = 2;
+            this.btnReportes.Text = "Reportes";
+            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Visible = false;
             // 
             // btnSalir
             // 
@@ -227,23 +245,6 @@
             this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBox1.TabIndex = 0;
             this.PictureBox1.TabStop = false;
-            // 
-            // btnReportes
-            // 
-            this.btnReportes.FlatAppearance.BorderSize = 0;
-            this.btnReportes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
-            this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportes.Location = new System.Drawing.Point(0, 342);
-            this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(250, 45);
-            this.btnReportes.TabIndex = 2;
-            this.btnReportes.Text = "Reportes";
-            this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Visible = false;
             // 
             // Inventario
             // 
