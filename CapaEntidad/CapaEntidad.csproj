@@ -45,6 +45,7 @@
     <Compile Include="CECliente.cs" />
     <Compile Include="CEEmpleado.cs" />
     <Compile Include="CEEmpresas.cs" />
+    <Compile Include="CEProductos.cs" />
     <Compile Include="CEUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

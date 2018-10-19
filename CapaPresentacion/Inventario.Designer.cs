@@ -90,6 +90,7 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(1050, 35);
             this.BarraTitulo.TabIndex = 3;
+            this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
             // 
             // IconRestaurar
             // 
@@ -103,6 +104,7 @@
             this.IconRestaurar.TabIndex = 1;
             this.IconRestaurar.TabStop = false;
             this.IconRestaurar.Visible = false;
+            this.IconRestaurar.Click += new System.EventHandler(this.IconRestaurar_Click);
             // 
             // IconMinimizar
             // 
@@ -115,6 +117,7 @@
             this.IconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IconMinimizar.TabIndex = 1;
             this.IconMinimizar.TabStop = false;
+            this.IconMinimizar.Click += new System.EventHandler(this.IconMinimizar_Click);
             // 
             // IconMaximizar
             // 
@@ -127,6 +130,7 @@
             this.IconMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IconMaximizar.TabIndex = 1;
             this.IconMaximizar.TabStop = false;
+            this.IconMaximizar.Click += new System.EventHandler(this.IconMaximizar_Click);
             // 
             // IconCerrar
             // 
@@ -139,6 +143,7 @@
             this.IconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.IconCerrar.TabIndex = 1;
             this.IconCerrar.TabStop = false;
+            this.IconCerrar.Click += new System.EventHandler(this.IconCerrar_Click);
             // 
             // btnSlim
             // 
@@ -182,7 +187,7 @@
             this.btnReportes.Text = "Reportes";
             this.btnReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportes.UseVisualStyleBackColor = true;
-            this.btnReportes.Visible = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnSalir
             // 
@@ -201,6 +206,7 @@
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnClientes
             // 
@@ -219,6 +225,7 @@
             this.btnClientes.Text = "Producto";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // BtnMenu
             // 
