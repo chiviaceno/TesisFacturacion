@@ -18,8 +18,7 @@ namespace CapaDatos
         SqlCommand command = new SqlCommand();
 
         public DataTable Mostrar()
-        {
-           
+        {           
             command.Connection = conexion.AbrirConexion();
             command.CommandText = "MostrarCliente";
             command.CommandType = CommandType.StoredProcedure;
