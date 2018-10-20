@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -40,12 +39,8 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblErrorUsuario = new System.Windows.Forms.Label();
             this.lblErrorPass = new System.Windows.Forms.Label();
-            this.lblErrorLogin = new System.Windows.Forms.Label();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            this.lblErrorLogin = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // panel1
@@ -66,7 +61,7 @@
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(780, 330);
+            this.shapeContainer1.Size = new System.Drawing.Size(577, 330);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
             // 
@@ -182,40 +177,6 @@
             this.lblErrorPass.Text = "Pass";
             this.lblErrorPass.Visible = false;
             // 
-            // lblErrorLogin
-            // 
-            this.lblErrorLogin.AutoSize = true;
-            this.lblErrorLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorLogin.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.lblErrorLogin.Location = new System.Drawing.Point(273, 210);
-            this.lblErrorLogin.Name = "lblErrorLogin";
-            this.lblErrorLogin.Size = new System.Drawing.Size(57, 20);
-            this.lblErrorLogin.TabIndex = 11;
-            this.lblErrorLogin.Text = "Login?";
-            this.lblErrorLogin.Visible = false;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(757, 9);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(20, 20);
-            this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(726, 9);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(20, 20);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimizar.TabIndex = 7;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Black;
@@ -233,6 +194,18 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblErrorLogin
+            // 
+            this.lblErrorLogin.AutoSize = true;
+            this.lblErrorLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorLogin.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblErrorLogin.Location = new System.Drawing.Point(273, 210);
+            this.lblErrorLogin.Name = "lblErrorLogin";
+            this.lblErrorLogin.Size = new System.Drawing.Size(57, 20);
+            this.lblErrorLogin.TabIndex = 11;
+            this.lblErrorLogin.Text = "Login?";
+            this.lblErrorLogin.Visible = false;
+            // 
             // Login
             // 
             this.AcceptButton = this.btnLogin;
@@ -240,12 +213,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(569, 330);
+            this.ClientSize = new System.Drawing.Size(577, 330);
             this.Controls.Add(this.lblErrorLogin);
             this.Controls.Add(this.lblErrorPass);
             this.Controls.Add(this.lblErrorUsuario);
-            this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
@@ -261,8 +232,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,10 +250,8 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label lblErrorUsuario;
         private System.Windows.Forms.Label lblErrorPass;
-        private System.Windows.Forms.Label lblErrorLogin;
-        private System.Windows.Forms.PictureBox btnCerrar;
-        private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblErrorLogin;
     }
 }
 
