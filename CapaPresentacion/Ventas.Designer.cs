@@ -238,7 +238,7 @@
             this.btnRegistrarVenta.ForeColor = System.Drawing.Color.White;
             this.btnRegistrarVenta.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistrarVenta.Image")));
             this.btnRegistrarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRegistrarVenta.Location = new System.Drawing.Point(0, 228);
+            this.btnRegistrarVenta.Location = new System.Drawing.Point(0, 229);
             this.btnRegistrarVenta.Name = "btnRegistrarVenta";
             this.btnRegistrarVenta.Size = new System.Drawing.Size(250, 45);
             this.btnRegistrarVenta.TabIndex = 1;
