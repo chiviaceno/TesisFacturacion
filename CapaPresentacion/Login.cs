@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Runtime.InteropServices;
-using CapaNegocio;
-using System.Data;
+﻿using CapaNegocio;
+using System;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
@@ -27,7 +20,7 @@ namespace CapaPresentacion
 
         private void txtUser_Enter(object sender, EventArgs e)
         {
-            if ( txtUser.Text == "USUARIO")
+            if (txtUser.Text == "USUARIO")
             {
                 txtUser.Text = "";
                 txtUser.ForeColor = Color.LightGray;
@@ -62,16 +55,8 @@ namespace CapaPresentacion
                 txtPass.UseSystemPasswordChar = false;
             }
         }
-        // metodo para cerrar el formulario  
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void btnMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+
         //metodo para mover el formulario
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
@@ -87,7 +72,7 @@ namespace CapaPresentacion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            CNLogin objLogin= new CNLogin();
+            CNLogin objLogin = new CNLogin();
             SqlDataReader Loguear;
             objLogin.Usuario = txtUser.Text;
             objLogin.Contraseña = txtPass.Text;
@@ -139,19 +124,8 @@ namespace CapaPresentacion
             }
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void btnCancelar_Click(object sender, EventArgs e)
+        // COMMENT: Este boton esta oculto detras del btnLogin_Click
+        private void btnCancelar_Click_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

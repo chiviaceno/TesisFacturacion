@@ -89,6 +89,14 @@
     <Compile Include="Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSCombos.cs">
+      <DependentUpon>DSCombos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCombos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCombos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +108,24 @@
     </Compile>
     <Compile Include="Empresa.Designer.cs">
       <DependentUpon>Empresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantenimientos\frmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimientos\frmProducto.Designer.cs">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantenimientos\frmProductoBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimientos\frmProductoBusqueda.Designer.cs">
+      <DependentUpon>frmProductoBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMantenimientos\frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMantenimientos\frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -151,6 +177,15 @@
     <EmbeddedResource Include="Empresa.resx">
       <DependentUpon>Empresa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimientos\frmProducto.resx">
+      <DependentUpon>frmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimientos\frmProductoBusqueda.resx">
+      <DependentUpon>frmProductoBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimientos\frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +213,17 @@
     <EmbeddedResource Include="Ventas.resx">
       <DependentUpon>Ventas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DSCombos.xsc">
+      <DependentUpon>DSCombos.xsd</DependentUpon>
+    </None>
+    <None Include="DSCombos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCombos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCombos.xss">
+      <DependentUpon>DSCombos.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -193,6 +239,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{c8344e22-3b8a-4d31-a1a4-99a32b5f64eb}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
       <Project>{656c7c5e-6f7b-4bc4-83ab-6dc5e30ab8fa}</Project>
       <Name>CapaEntidad</Name>
@@ -214,5 +264,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

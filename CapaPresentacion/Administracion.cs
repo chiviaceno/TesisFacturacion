@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using CapaPresentacionAdministracion;
 using CapaPresentacion;
+using CapaPresentacion.frmMantenimientos;
 
 namespace CapaPresentacion
 {
@@ -21,7 +22,8 @@ namespace CapaPresentacion
         }
         private void Administracion_Load(object sender, EventArgs e)
         {
-
+            //this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Normal;
         }
 
         //private void Privilegio()
@@ -70,7 +72,7 @@ namespace CapaPresentacion
             e.Graphics.FillRectangle(blueBrush, sizeGripRectangle);
 
             base.OnPaint(e);
-            ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent , sizeGripRectangle);
+            ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
 
         //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
@@ -157,7 +159,7 @@ namespace CapaPresentacion
                 formulario.Show();
 
                 formulario.BringToFront();
-                formulario.FormClosed += new FormClosedEventHandler(CloseForms);               
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
             else
             {
@@ -184,7 +186,8 @@ namespace CapaPresentacion
                 btnEmpresas.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["Usuarios"] == null)
                 btnUsuarios.BackColor = Color.FromArgb(4, 41, 68);
-            
+            if (Application.OpenForms["frmProducto"] == null)
+                btnUsuarios.BackColor = Color.FromArgb(4, 41, 68);
         }
 
         private void btnEmpleados_Click(object sender, EventArgs e)
@@ -198,20 +201,18 @@ namespace CapaPresentacion
             AbrirFormEnPanel<Empresa>();
             btnEmpresas.BackColor = Color.FromArgb(12, 61, 93);
         }
-    
+
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormEnPanel<Usuarios>();
             btnUsuarios.BackColor = Color.FromArgb(12, 61, 93);
-    }
+        }
 
-
-        
-
-        private void BtnMenu_Click(object sender, EventArgs e)
+        private void btnProductos_Click(object sender, EventArgs e)
         {
-
+            AbrirFormEnPanel<frmProducto>();
+            btnProductos.BackColor = Color.FromArgb(12, 61, 93);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -226,6 +227,6 @@ namespace CapaPresentacion
             btnClientes.BackColor = Color.FromArgb(12, 61, 93);
         }
 
-        
+
     }
 }

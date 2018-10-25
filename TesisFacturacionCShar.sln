@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\Capa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{9F0B8269-A666-450C-BF11-002BC531BA05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{B7B66286-34B4-450A-94D1-A13A68852C31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesisFacturacion", "CapaPresentacion\TesisFacturacion.csproj", "{B7B66286-34B4-450A-94D1-A13A68852C31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidad", "CapaEntidad\CapaEntidad.csproj", "{656C7C5E-6F7B-4BC4-83AB-6DC5E30AB8FA}"
 EndProject

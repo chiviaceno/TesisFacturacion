@@ -15,7 +15,7 @@ namespace CapaDatos
 
         SqlDataReader leer;
         DataTable tabla = new DataTable();
-        SqlCommand command = new SqlCommand();
+        SqlCommand command = new SqlCommand(); 
 
         public DataTable ListarEmpleado()
         {

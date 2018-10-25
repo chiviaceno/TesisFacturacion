@@ -38,6 +38,7 @@
             this.IconCerrar = new System.Windows.Forms.PictureBox();
             this.btnSlim = new System.Windows.Forms.PictureBox();
             this.menuVertical = new System.Windows.Forms.Panel();
+            this.btnProductos = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnEmpresas = new System.Windows.Forms.Button();
@@ -67,7 +68,7 @@
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(1300, 700);
+            this.panelPrincipal.Size = new System.Drawing.Size(1172, 700);
             this.panelPrincipal.TabIndex = 1;
             // 
             // panelContenedor
@@ -76,7 +77,7 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(250, 35);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1050, 665);
+            this.panelContenedor.Size = new System.Drawing.Size(922, 665);
             this.panelContenedor.TabIndex = 4;
             // 
             // BarraTitulo
@@ -90,7 +91,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraTitulo.Location = new System.Drawing.Point(250, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(1050, 35);
+            this.BarraTitulo.Size = new System.Drawing.Size(922, 35);
             this.BarraTitulo.TabIndex = 3;
             this.BarraTitulo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseMove);
             // 
@@ -99,7 +100,7 @@
             this.IconRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IconRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconRestaurar.Image = ((System.Drawing.Image)(resources.GetObject("IconRestaurar.Image")));
-            this.IconRestaurar.Location = new System.Drawing.Point(996, 3);
+            this.IconRestaurar.Location = new System.Drawing.Point(868, 3);
             this.IconRestaurar.Name = "IconRestaurar";
             this.IconRestaurar.Size = new System.Drawing.Size(20, 20);
             this.IconRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -113,7 +114,7 @@
             this.IconMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IconMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("IconMinimizar.Image")));
-            this.IconMinimizar.Location = new System.Drawing.Point(970, 3);
+            this.IconMinimizar.Location = new System.Drawing.Point(842, 3);
             this.IconMinimizar.Name = "IconMinimizar";
             this.IconMinimizar.Size = new System.Drawing.Size(20, 20);
             this.IconMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -126,7 +127,7 @@
             this.IconMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IconMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("IconMaximizar.Image")));
-            this.IconMaximizar.Location = new System.Drawing.Point(996, 3);
+            this.IconMaximizar.Location = new System.Drawing.Point(868, 3);
             this.IconMaximizar.Name = "IconMaximizar";
             this.IconMaximizar.Size = new System.Drawing.Size(20, 20);
             this.IconMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +140,7 @@
             this.IconCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.IconCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.IconCerrar.Image = ((System.Drawing.Image)(resources.GetObject("IconCerrar.Image")));
-            this.IconCerrar.Location = new System.Drawing.Point(1022, 3);
+            this.IconCerrar.Location = new System.Drawing.Point(894, 3);
             this.IconCerrar.Name = "IconCerrar";
             this.IconCerrar.Size = new System.Drawing.Size(20, 20);
             this.IconCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,6 +163,7 @@
             // menuVertical
             // 
             this.menuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(39)))), ((int)(((byte)(69)))));
+            this.menuVertical.Controls.Add(this.btnProductos);
             this.menuVertical.Controls.Add(this.btnSalir);
             this.menuVertical.Controls.Add(this.btnUsuarios);
             this.menuVertical.Controls.Add(this.btnEmpresas);
@@ -175,6 +177,24 @@
             this.menuVertical.Name = "menuVertical";
             this.menuVertical.Size = new System.Drawing.Size(250, 700);
             this.menuVertical.TabIndex = 2;
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(0, 502);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(250, 45);
+            this.btnProductos.TabIndex = 2;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnSalir
             // 
@@ -283,7 +303,6 @@
             this.BtnMenu.Text = "    Menú Admin";
             this.BtnMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnMenu.UseVisualStyleBackColor = true;
-            this.BtnMenu.Click += new System.EventHandler(this.BtnMenu_Click);
             // 
             // PictureBox1
             // 
@@ -299,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 700);
+            this.ClientSize = new System.Drawing.Size(1172, 700);
             this.Controls.Add(this.panelPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(650, 650);
@@ -339,5 +358,6 @@
         internal System.Windows.Forms.Button btnClientes;
         internal System.Windows.Forms.Button BtnMenu;
         internal System.Windows.Forms.PictureBox PictureBox1;
+        internal System.Windows.Forms.Button btnProductos;
     }
 }
